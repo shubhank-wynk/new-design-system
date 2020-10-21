@@ -17,6 +17,21 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `yarn lint`
+
+Launches the lint runner in the interactive watch mode.<br />
+Learn more about [ESLint](https://eslint.org/docs/user-guide/getting-started).
+
+### `yarn format`
+
+Launches the format runner in the interactive watch mode.<br />
+Learn more about [Prettier](https://prettier.io/).
+
+### `yarn storybook`
+
+Launches the storybook.<br />
+Learn more about [Storybook](https://storybook.js.org).
+
 ### `yarn build`
 
 Builds the app for production to the `build` folder.<br />
