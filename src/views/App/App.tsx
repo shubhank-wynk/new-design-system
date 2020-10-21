@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Container, Header, Logo, Link } from './App.styled';
 
-const App = () => {
+import { Container, Header, Logo, Link } from './App.styled';
+import logo from './logo.svg';
+
+const App: React.FC = () => {
   return (
     <Container className="App">
       <Header>

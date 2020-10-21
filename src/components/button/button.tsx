@@ -12,7 +12,13 @@ type Props = {
 /**
  * Primary UI component for user interaction
  */
-const Button = ({ primary = false, backgroundColor, size = 'medium', label, ...props }: Props) => {
+const Button: React.FC<Props> = ({
+  primary = false,
+  backgroundColor,
+  size = 'medium',
+  label,
+  ...props
+}: Props) => {
   return (
     <StyledButton backgroundColor={backgroundColor} primary={primary} size={size} {...props}>
       {label}

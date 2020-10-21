@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
 
 const getTypeStyles = (primary: boolean) => {
-  if (primary)
+  if (primary) {
     return css`
       color: white;
       background-color: #1ea7fd;
     `;
+  }
 
   return css`
     color: #333;
