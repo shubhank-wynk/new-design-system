@@ -24,8 +24,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "format": "prettier --write './**/*.{js,md,ts,tsx,jsx}'",
-    "lint": "eslint --cache --ext './**/*.{js,ts,tsx,jsx}' --format=pretty ./",
-    "pre-commit": ""
+    "lint": "eslint --cache --ext './**/*.{js,ts,tsx,jsx}' --format=pretty ./"
   },
   "husky": {
     "hooks": {
