@@ -28,8 +28,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn pretty-quick --staged",
-      "pre-push": "yarn pretty-quick --staged"
+      "pre-commit": "yarn pretty-quick --staged lint",
+      "pre-push": "yarn test"
     }
   },
   "eslintConfig": {
