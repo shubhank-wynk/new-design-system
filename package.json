@@ -26,12 +26,6 @@
     "format": "prettier --write './**/*.{js,md,ts,tsx,jsx}'",
     "lint": "eslint --cache --ext './**/*.{js,ts,tsx,jsx}' --format=pretty ./"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn pretty-quick --staged && yarn lint",
-      "pre-push": "yarn test --watchAll=false"
-    }
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
