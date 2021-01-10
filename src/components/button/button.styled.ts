@@ -1,55 +1,107 @@
 import styled, { css } from 'styled-components';
-
-const getTypeStyles = (primary: boolean) => {
-  if (primary) {
-    return css`
-      color: white;
-      background-color: #1ea7fd;
-    `;
+import {theme} from '../../globalStyles';
+const getDesignTypeStyles = (type?: string) => {
+  switch(type){
+      case 'outlined' :
+        return css`
+          background:transparent;
+          border:1px solid ${theme.primary.orange4};
+          color:${theme.primary.orange4};
+        `
+      case 'link' :
+        return css`
+          background:transparent;
+          border:1px solid transparent;
+          color:${theme.primary.orange4};
+        `
+      default:
+        return css`
+        border:1px solid transparent;
+        `
   }
-
-  return css`
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  `;
 };
 
-const getSizeStyles = (size: string) => {
+const getSizeStyles = (size?: string) => {
   switch (size) {
     case 'small':
       return css`
-        font-size: 12px;
-        padding: 10px 16px;
+        font-size: 1rem;
+        line-height:1.25rem;
+        padding: 0.75rem 1rem;
       `;
     case 'large':
       return css`
-        font-size: 16px;
-        padding: 12px 24px;
+        font-size: 1.5rem;
+        line-height:1.75rem;
+        padding: 0.75rem 1.75rem;
       `;
     default:
       return css`
-        font-size: 14px;
-        padding: 11px 20px;
+        font-size: 1.25rem;
+        line-height:1.5rem;  
+        padding:0.75rem 1.5rem;
+      `;
+  }
+};
+const getShape = (shape?: string) => {
+  switch (shape) {
+    case 'circle':
+      return css`
+        border-radius:50%;
+        height:2em;
+        width:2em;
+      `;
+    case 'round':
+      return css`
+        border-radius:3rem;
+      `;
+    default:
+      return css`
+         border-radius:0.5rem;
+         background-color:inherit;
+         color:inherit;
+         border-color:inherit;
+      `;
+  }
+};
+const getTheme = (Theme?: string) => {
+  switch (Theme) {
+    case 'primary':
+      return css`
+      background:${theme.primary.tealGrad1};
+      color:${theme.secondary.white};
+      border-color:${theme.primary.teal6};
+      `;
+    case 'sucess':
+      return css`
+      background:${theme.primary.sucess3};
+      color:${theme.secondary.white};
+      border-color:${theme.primary.sucess3};
+      `;
+    default:
+      return css`
+        background:${theme.primary.orangeGrad2};
+        border-color:${theme.primary.orange5};
+        color:${theme.secondary.white};
       `;
   }
 };
 
+
 export const StyledButton = styled.button<{
-  backgroundColor?: string;
-  primary: boolean;
-  size: string;
+  size?: string;
+  shape?: string;
+  btntype?:string;
+  theme?:string;
 }>`
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
+  font-family: ${theme.primary.font};
+  font-weight: 600;
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-
-  ${(props) => getTypeStyles(props.primary)};
+  text-align:center;
+  line-height:auto;
+  outline:none;
   ${(props) => getSizeStyles(props.size)};
-
-  background-color: ${(props) => props.backgroundColor};
+  ${(props) => getShape(props.shape)};
+  ${(props) => getTheme(props.theme)};
+  ${(props) => getDesignTypeStyles(props.btntype)};
 `;

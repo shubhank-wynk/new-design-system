@@ -1,16 +1,12 @@
 import React from 'react';
-
-import { StyledButton } from './button.styled';
+import {StyledButton} from './button.styled';
 import Props from './button.types';
 
 const Button: React.FC<Props> = ({
-  primary = false,
-  backgroundColor,
-  size = 'medium',
-  label,
+  size,shape,theme,type,label,
 }: Props) => {
   return (
-    <StyledButton backgroundColor={backgroundColor} primary={primary} size={size}>
+    <StyledButton theme={theme} size={size} shape={shape} btntype={type}>
       {label}
     </StyledButton>
   );

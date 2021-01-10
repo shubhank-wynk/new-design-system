@@ -1,8 +1,9 @@
 type Props = {
-  primary?: boolean;
-  backgroundColor?: string;
+  shape?:string;
   size?: string;
   label: string;
+  theme?:string;
+  type?:string;
 };
 
 export default Props;
