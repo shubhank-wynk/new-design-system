@@ -1,14 +1,14 @@
 import styled, { css } from 'styled-components';
-import {textTransform,fontWeight,fontStyle} from './heading.styled';
+import {textTransform,fontWeight,fontStyle} from './typography.styled';
 import {theme} from '../../../globalStyles';
 
-export const H3 = styled.h3<{
+export const S1 = styled.h4<{
     Tcase:string,
     weight:string,
     style:string,
   }>`
-    font-size:2rem;
-    line-height:2.5rem;
+    font-size:1.5rem;
+    line-height:1.875rem;
     color:${theme.primary.gray7};
     font-family:${theme.primary.font};
     ${(props) => textTransform(props.Tcase)};

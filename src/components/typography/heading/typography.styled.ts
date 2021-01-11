@@ -1,13 +1,13 @@
-import styled, { css } from 'styled-components';
+import { css } from 'styled-components';
 
-const textTransform = (Tcase?: string) => {
-    switch (Tcase) {
+const textTransform = (Fcase?: string) => {
+    switch (Fcase) {
         case 'upper':
-        return css`
+            return css`
         text-transform:uppercase;
         `;
         case 'camel':
-        return css`
+            return css`
         text-transform:capitalize;
         `;
         default:
@@ -16,22 +16,22 @@ const textTransform = (Tcase?: string) => {
             `;
     }
 }
-const fontWeight = (weight?: string) => {
-    switch (weight) {
+const fontWeight = (Fweight?: string) => {
+    switch (Fweight) {
         case 'ligth':
-        return css`font-weight:300;`;
+            return css`font-weight:300;`;
         case 'regular':
-        return css`font-weight:400;`;
+            return css`font-weight:400;`;
         case 'extaBold':
-            return css `font-weight:800;`;
+            return css`font-weight:800;`;
         default:
             return css`font-weight:600;`;
     }
 }
-const fontStyle = (style?: string) => {
-    switch (style) {
+const fontStyle = (Fstyle?: string) => {
+    switch (Fstyle) {
         case 'italic':
-        return css`font-style:italic;`;
+            return css`font-style:italic;`;
         default:
             return css`font-style:normal;`;
     }
