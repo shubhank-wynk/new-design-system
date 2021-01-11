@@ -3,9 +3,9 @@ import {textTransform,fontWeight,fontStyle} from './typography.styled';
 import {theme} from '../../../globalStyles';
 
 export const H3 = styled.h3<{
-    Fcase:string,
-    Fweight:string,
-    Fstyle:string,
+  Fcase?:string;
+  Fweight?:string;
+  Fstyle?:string;
   }>`
     font-size:2rem;
     line-height:2.5rem;

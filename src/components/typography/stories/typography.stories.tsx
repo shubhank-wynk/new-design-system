@@ -6,11 +6,7 @@ import {H3} from '../heading/h3.styled';
 import {S1} from '../heading/s1.styled';
 import {S2} from '../heading/s2.styled';
 import {S3} from '../heading/s3.styled';
-import {S4} from '../heading/s4.styled';
 import {P} from '../p.styled';
-
-
-
 export default {
   title: 'Heading',
     argTypes: {
@@ -81,16 +77,7 @@ export default {
   };
   Subtitle3.args={
     Flabel: 'Subtitle 3',
-  };
-  export const Subtitle4 = (args :Props) =>{
-    return(
-    <S4 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
-      </S4>
-    )
-  };
-  Subtitle4.args={
-    Flabel: 'Subtitle 4',
+    Fweight:'regular',
   };
   export const Paragraph = (args :Props) =>{
     return(
