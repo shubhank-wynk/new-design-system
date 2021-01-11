@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import {textTransform,fontWeight,fontStyle} from './typography.styled';
 import {theme} from '../../../globalStyles';
 

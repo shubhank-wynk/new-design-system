@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  AlertOutlined,
   AddOutlined,
   ArrowDownOutlined,
   ArrowUpOutlined,
@@ -41,7 +40,6 @@ import {
   SendOutlined,
   SearchOutlined,
   ShowOutlined,
-  ThumbDownOutlined,
   TopOutlined,
   UploadHoverOutlined,
   UploadOutlined,
@@ -53,15 +51,38 @@ import {
   UserUnverifyOutlined,
   WifiOffOutlined,
   WifiOutlined,
-  AlertTriangleOutlined,
-  CodeSnippetOutlined,
-  CopyOutlined,
   DocumentSearcchOutlined,
 } from '../outlined';
+
 import {
+  AlertOutlined, AlertTriangleOutlined, CodeSnippetOutlined, CopyOutlined,
+  FilterOutlined,
+  HelpOutlined,
+  InfoOutlined,
+  MaximizeOutlined,
+  MinimizeOutlined,
+  MuteOutlined,
+  ReviewOutlined,
+  SettingsOutlined,
+  SoundOnOutlined,
+  TextBoldOutlined,
+  TextItalicOutlined,
+  ThumbDownOutlined,
+  ThumbUpOutlined,
+} from '../outlined2';
+import {
+  CheckedFilled,
   CheckFilled,
   DropDownFilled,
   DropDownUpFilled,
+  ErrorFilled,
+  FilterClearFilled,
+  FilterStrokeFilled,
+  GridFilled,
+  InfoNAFilled,
+  ListFilled,
+  PauseFilled,
+  PlayFilled,
   TriangleDownFilled,
   TriangleUpFilled,
 } from '../filled';
@@ -92,13 +113,11 @@ export default {
     fontSize: { control: { type: 'inline-radio', options: ['48px', '24px', '16px'] } },
     color: { control: 'color' },
   },
-};
+}
 type args = { fontSize: string; color: string };
 export const Outlined = (args: args) => {
   return (
     <div style={{ ...args }}>
-      <AlertOutlined />
-      <AlertTriangleOutlined />
       <AddOutlined />
       <ArrowDownOutlined />
       <ArrowUpOutlined />
@@ -113,8 +132,6 @@ export const Outlined = (args: args) => {
       <ChevrownUpOutlined />
       <CheckCircleOutlined />
       <CheckOutlined />
-      <CodeSnippetOutlined />
-      <CopyOutlined />
       <CornerRightDownOutlined />
       <CrossCircleOutlined />
       <CrossOutlined />
@@ -143,7 +160,6 @@ export const Outlined = (args: args) => {
       <SendOutlined />
       <ShowOutlined />
       <TopOutlined />
-      <ThumbDownOutlined />
       <UploadHoverOutlined />
       <UploadPausedOutlined />
       <UploadOutlined />
@@ -154,6 +170,27 @@ export const Outlined = (args: args) => {
       <WaitingOutlined />
       <WifiOffOutlined />
       <WifiOutlined />
+
+      {/* view box  0 0 16 16 icons outlined */}
+      <AlertOutlined />
+      <AlertTriangleOutlined />
+      <CodeSnippetOutlined />
+      <CopyOutlined />
+      <FilterOutlined/>
+      <HelpOutlined />
+      <InfoOutlined/>
+      <LinkOutlined/>
+      <MaximizeOutlined/>
+      <MinimizeOutlined />
+      <MuteOutlined />
+      <ReviewOutlined />
+      <ReviewOutlined/>
+      <SettingsOutlined />
+      <SoundOnOutlined />
+      <TextBoldOutlined/>
+      <TextItalicOutlined/>
+      <ThumbUpOutlined />
+      <ThumbDownOutlined />
     </div>
   );
 };
@@ -167,6 +204,17 @@ export const Filled = (args: args) => {
       <DropDownUpFilled />
       <TriangleDownFilled />
       <TriangleUpFilled />
+      {/* filed view 0 0 16 16 */}
+      <CheckedFilled />
+      <ErrorFilled/>
+      <FilterStrokeFilled />
+      <FilterClearFilled />
+      <GridFilled />
+      <InfoNAFilled/>
+      <InfoNAFilled/>
+      <ListFilled/>
+      <PauseFilled/>
+      <PlayFilled/>
     </div>
   );
 };
