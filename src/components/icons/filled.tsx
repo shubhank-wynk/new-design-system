@@ -58,7 +58,7 @@ export const FilterStrokeFilled = SvgIcon(() => {
 export const FilterClearFilled = SvgIcon(() => {
    return (<><path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M1.09455 1.09452L10.1298 10.1298V13.1679C10.1298 13.4584 9.96203 13.7228 9.69918 13.8465L6.51498 15.3452C6.28266 15.4546 6.01055 15.4375 5.79374 15.2999C5.57694 15.1623 5.44559 14.9234 5.44559 14.6666V9.52965L1.04311 4.67537C0.744941 4.34711 0.583374 3.91873 0.583374 3.47884V2.34501C0.583374 1.86299 0.776664 1.41711 1.09455 1.09452Z" />
    <path fill="currentColor" fillRule="evenodd" clipRule="evenodd" d="M11.8268 7.82675L14.9055 4.70449L14.9063 4.7036C15.2369 4.36983 15.4167 3.91842 15.4167 3.4535V2.34501C15.4167 1.39379 14.664 0.583313 13.6864 0.583313H4.58337L11.8268 7.82675Z" />
-   <path d="M1 1L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M1 1L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
    </>
    )
 });

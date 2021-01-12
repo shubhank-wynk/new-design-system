@@ -1,18 +1,40 @@
 import styled, { css } from 'styled-components';
 import {theme} from '../../globalStyles';
+const getTheme = (Theme?: string) => {
+  switch (Theme) {
+    case 'primary':
+      return css`
+      background:${theme.primary.tealGrad1};
+      color:${theme.secondary.white};
+      border-color:${theme.primary.teal6};
+      `;
+    case 'sucess':
+      return css`
+      background:${theme.primary.sucess3};
+      color:${theme.secondary.white};
+      border-color:${theme.primary.sucess3};
+      `;
+    default:
+      return css`
+        background:${theme.primary.orangeGrad2};
+        border-color:${theme.primary.orange5};
+        color:${theme.secondary.white};
+      `;
+  }
+};
 const getDesignTypeStyles = (type?: string) => {
   switch(type){
       case 'outlined' :
         return css`
           background:transparent;
-          border:1px solid ${theme.primary.orange4};
           color:${theme.primary.orange4};
+          border:1px solid inherit;
         `
       case 'link' :
         return css`
           background:transparent;
-          border:1px solid transparent;
           color:${theme.primary.orange4};
+          border-color:transparent;
         `
       default:
         return css`
@@ -64,28 +86,7 @@ const getShape = (shape?: string) => {
       `;
   }
 };
-const getTheme = (Theme?: string) => {
-  switch (Theme) {
-    case 'primary':
-      return css`
-      background:${theme.primary.tealGrad1};
-      color:${theme.secondary.white};
-      border-color:${theme.primary.teal6};
-      `;
-    case 'sucess':
-      return css`
-      background:${theme.primary.sucess3};
-      color:${theme.secondary.white};
-      border-color:${theme.primary.sucess3};
-      `;
-    default:
-      return css`
-        background:${theme.primary.orangeGrad2};
-        border-color:${theme.primary.orange5};
-        color:${theme.secondary.white};
-      `;
-  }
-};
+
 
 
 export const StyledButton = styled.button<{
@@ -98,7 +99,7 @@ export const StyledButton = styled.button<{
   font-weight: 600;
   cursor: pointer;
   text-align:center;
-  line-height:auto;
+  line-height:initial;
   outline:none;
   ${(props) => getSizeStyles(props.size)};
   ${(props) => getShape(props.shape)};

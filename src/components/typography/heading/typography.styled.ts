@@ -18,11 +18,11 @@ const textTransform = (Fcase?: string) => {
 }
 const fontWeight = (Fweight?: string) => {
     switch (Fweight) {
-        case 'ligth':
+        case 'light':
             return css`font-weight:300;`;
         case 'regular':
             return css`font-weight:400;`;
-        case 'extaBold':
+        case 'extraBold':
             return css`font-weight:800;`;
         default:
             return css`font-weight:600;`;
