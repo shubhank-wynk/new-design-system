@@ -7,11 +7,12 @@ import {S1} from '../heading/s1.styled';
 import {S2} from '../heading/s2.styled';
 import {S3} from '../heading/s3.styled';
 import {P} from '../p.styled';
+import {Body} from '../body.styled';
 export default {
-  title: 'Heading',
+  title: 'Typography',
     argTypes: {
       Flabel: { control: 'text' },
-      Fweight: { control: { type: 'inline-radio', options: ['ligth', 'regular', 'bold','extaBold'] } },
+      Fweight: { control: { type: 'inline-radio', options: ['light', 'regular', 'bold','extaBold'] } },
       Fstyle: { control: {type:'inline-radio', options:['italic','normal']} },
       Fcase: { control: {type:'inline-radio', options:['upper','camel','lower']} },
     },
@@ -88,5 +89,15 @@ export default {
   };
   Paragraph.args={
     Flabel: 'Paragraph',
+  };
+  export const Body2 = (args :Props) =>{
+    return(
+    <Body Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
+        {args.Flabel}
+      </Body>
+    )
+  };
+  Body2.args={
+    Flabel: 'Body2',
   };
 

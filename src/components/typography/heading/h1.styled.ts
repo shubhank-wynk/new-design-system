@@ -9,7 +9,7 @@ export const H1 = styled.h1<{
   }>`
     font-size:3.25rem;
     line-height:4.0625rem;
-    letter-spacing:-0.5%;
+    letter-spacing:-0.25px;
     color:${theme.primary.gray7};
     font-family:${theme.primary.font};
     ${(props) => textTransform(props.Fcase)};

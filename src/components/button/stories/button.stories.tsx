@@ -8,7 +8,7 @@ export default {
   argTypes: {
     label: { control: 'text' },
     shape: {control :{type : 'inline-radio', options:['circle','round','default']}},
-    size:  {control :{type: 'inline-radio', options: ['large', 'medium', 'small'] } },
+    size:  {control :{type: 'inline-radio', options: ['large', 'medium', 'small','default'] } },
     type: {control :{type: 'inline-radio', options: ['outlined','link','default']}},
     theme: {control :{type: 'inline-radio', options: ['primary','sucess','default']}},
   },
@@ -17,14 +17,14 @@ export default {
 export const Large = (args: Props) => <Button {...args} />;
 Large.args = {
   label: 'Button',
-  size: 'large',
+  // size: 'large',
 };
 
-export const Small = (args: Props) => <Button {...args} />;
-Small.args = {
-  label: 'Button',
-  size: 'small',
-};
+// export const Small = (args: Props) => <Button {...args} />;
+// Small.args = {
+//   label: 'Button',
+//   size: 'small',
+// };
 export const Circle = (args: Props) => <Button {...args} />;
 Circle.args = {
   label: 'Button',

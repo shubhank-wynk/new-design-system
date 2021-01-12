@@ -7,6 +7,10 @@ const getTheme = (Theme?: string) => {
       background:${theme.primary.tealGrad1};
       color:${theme.secondary.white};
       border-color:${theme.primary.teal6};
+      :hover,:focus{
+        background:${theme.primary.teal2};
+      }
+      :active,.active{background:${theme.primary.teal6};}
       `;
     case 'sucess':
       return css`
@@ -19,6 +23,12 @@ const getTheme = (Theme?: string) => {
         background:${theme.primary.orangeGrad2};
         border-color:${theme.primary.orange5};
         color:${theme.secondary.white};
+        :hover,:focus{
+          background: ${theme.primary.orangeGrad1};
+        }
+        :active,&.active{
+          background-color:${theme.primary.orange6};
+        }
       `;
   }
 };
@@ -29,6 +39,13 @@ const getDesignTypeStyles = (type?: string) => {
           background:transparent;
           color:${theme.primary.orange4};
           border:1px solid inherit;
+          &:hover,&:focus{
+          background-color:${theme.primary.orange3};
+          color:${theme.primary.orange4};
+        }
+        &:active,.active{background-color:${theme.primary.orange3};
+        color:${theme.primary.orange4};  
+      }
         `
       case 'link' :
         return css`
@@ -76,6 +93,8 @@ const getShape = (shape?: string) => {
     case 'round':
       return css`
         border-radius:3rem;
+        box-shadow: 0.375rem 0.375rem  1.875rem ${theme.primary.orangeShadow} ;
+        
       `;
     default:
       return css`

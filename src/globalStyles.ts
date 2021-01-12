@@ -9,6 +9,9 @@ export const theme = {
     orange6: "#EF420F",
     orange5: "#FF6639",
     orange4: "#FF7D57",
+    orange3:"#FFF3F0",
+    orange2:"#FFE6DF",
+
     error5: "#DA1414",
     error4: "#FF2C2C",
     error3: "#E24A4A",
@@ -21,13 +24,14 @@ export const theme = {
     teal6: "#224D5B",
     teal5: "#336676",
     teal4: "#4F8293",
+    teal2:"#CFE0E5",
 
     tealGrad1: 'linear-gradient(96.45deg, #698F9A 0%, #255A68 100%)',
     tealGrad2: 'linear-gradient(180deg, #255A68 0%, #698F9A 100%)',
-
+    tealShadow:'rgba(59, 99, 112, 0.6)',
     orangeGrad1: 'linear-gradient(96.45deg, #FF6E65 0%, #FF8957 100%)',
     orangeGrad2: 'linear-gradient(96.45deg, #FF5D52 0%, #FF7940 100%)',
-
+    orangeShadow:'rgba(255, 139, 105, 0.2)',
   },
   secondary: {
     font: "nonito",
