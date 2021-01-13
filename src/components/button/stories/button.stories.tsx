@@ -7,41 +7,38 @@ export default {
   title: 'Button',
   argTypes: {
     label: { control: 'text' },
-    shape: {control :{type : 'inline-radio', options:['circle','round','default']}},
+    shape: {control :{type : 'inline-radio', options:['circle','rounded','default']}},
     size:  {control :{type: 'inline-radio', options: ['large', 'medium', 'small','default'] } },
-    type: {control :{type: 'inline-radio', options: ['outlined','link','default']}},
-    theme: {control :{type: 'inline-radio', options: ['primary','sucess','default']}},
+    type: {control :{type: 'inline-radio', options: ['secoundary','tertiary','default']}},
+    theme: {control :{type: 'inline-radio', options: ['primary','sucess','orange']}},
   },
 };
 
-export const Large = (args: Props) => <Button {...args} />;
-Large.args = {
-  label: 'Button',
-  // size: 'large',
-};
 
-// export const Small = (args: Props) => <Button {...args} />;
-// Small.args = {
-//   label: 'Button',
-//   size: 'small',
-// };
+
+export const Small = (args: Props) => <Button {...args} />;
+Small.args = {
+  label: 'Button',
+  size: 'small',
+};
 export const Circle = (args: Props) => <Button {...args} />;
 Circle.args = {
   label: 'Button',
   shape: 'circle',
 };
-export const Round = (args: Props) => <Button {...args} />;
-Round.args = {
+export const Rounded = (args: Props) => <Button {...args} />;
+Rounded.args = {
   label: 'Button',
-  shape: 'round',
+  shape: 'rounded',
 };
-export const Outlined = (args: Props) => <Button {...args} />;
-Outlined.args = {
-  label: 'Button',
-  type: 'outlined',
+export const Secoundary = (args: Props) => <Button {...args} />;
+Secoundary.args = {
+  label: 'Secoundary',
+  theme:'orange',
+  type: 'secoundary',
 };
-export const Link = (args: Props) => <Button {...args} />;
-Link.args = {
+export const Tertiary = (args: Props) => <Button {...args} />;
+Tertiary.args = {
   label: 'Button',
-  type: 'link',
+  type: 'tertiary',
 };

@@ -5,8 +5,9 @@ import Props from './button.types';
 const Button: React.FC<Props> = ({
   size,shape,theme,type,label,
 }: Props) => {
+  type=type||'primary'
   return (
-    <StyledButton theme={theme} size={size} shape={shape} btntype={type}>
+    <StyledButton className={`btn-${type}`} theme={theme} size={size} shape={shape} btntype={type}>
       {label}
     </StyledButton>
   );

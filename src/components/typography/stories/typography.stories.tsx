@@ -6,8 +6,8 @@ import {H3} from '../heading/h3.styled';
 import {S1} from '../heading/s1.styled';
 import {S2} from '../heading/s2.styled';
 import {S3} from '../heading/s3.styled';
-import {P} from '../p.styled';
-import {Body} from '../body.styled';
+import {B1} from '../b1.styled';
+import {B2} from '../b2.styled';
 export default {
   title: 'Typography',
     argTypes: {
@@ -21,9 +21,11 @@ export default {
   
   export const Heading1 = (args :Props) =>{
     return(
+      <div>
     <H1 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
         {args.Flabel}
       </H1>
+      </div>
     )
   };
   Heading1.args={
@@ -80,24 +82,24 @@ export default {
     Flabel: 'Subtitle 3',
     Fweight:'regular',
   };
-  export const Paragraph = (args :Props) =>{
+  export const Body1 = (args :Props) =>{
     return(
-    <P Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
+    <B1 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
         {args.Flabel}
-      </P>
+      </B1>
     )
   };
-  Paragraph.args={
-    Flabel: 'Paragraph',
+  Body1.args={
+    Flabel: 'Body1',
   };
   export const Body2 = (args :Props) =>{
     return(
-    <Body Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
+    <B2 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
         {args.Flabel}
-      </Body>
+      </B2>
     )
   };
   Body2.args={
-    Flabel: 'Body2',
+    Flabel: 'Body21',
   };
 

@@ -1,6 +1,19 @@
+import { createGlobalStyle } from 'styled-components';
+ export const GlobalStyle = createGlobalStyle` 
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+`;
 export const theme = {
+
+  orange:{shade2:'#FFE6DF',},
   primary: {
-    font: "Nunito",
+    shade2:"",
+    font: 'Nunito, sans-serif',
     gray7: "#252525",
     gray6: "#555555",
     gray5: "#858585",
@@ -34,6 +47,7 @@ export const theme = {
     orangeShadow:'rgba(255, 139, 105, 0.2)',
   },
   secondary: {
+    shade2:"",
     font: "nonito",
     white3: "#FBF8F1",
     white2: "#FCFCFC",
