@@ -1,55 +1,110 @@
 import styled, { css } from 'styled-components';
+import {theme} from '../../theme';
 
-const getTypeStyles = (primary: boolean) => {
-  if (primary) {
-    return css`
-      color: white;
-      background-color: #1ea7fd;
-    `;
+const getDesignTypeStyles = (type?: string,color:keyof typeof theme="orange") => {
+  switch(type){
+      case 'secoundary' :
+        return css`
+          &.btn-secoundary{
+            background:transparent;
+            color:${theme[color].shade5};
+            border:1px solid ${theme[color].shade5};
+          &:hover,&:focus{
+          background-color:${theme[color].shade1};
+          color:${theme[color].shade4};
+          border-color:${theme[color].shade4};
+        }
+        &:active,.active{background-color:${theme[color].shade2};
+        color:${theme[color].shade5};
+        border-color:${theme[color].shade5};
+      }
+    }
+        `
+      case 'tertiary' :
+        return css`
+          background:transparent;
+          color:${theme[color].shade4};
+          border:none;
+          border-bottom:1px solid transparent;
+          padding:0.5rem 0.75rem;
+          border-radius:0;
+          &.btn-tertiary{
+            &:hover,&:focus{border-bottom-color:${theme[color].shade5};}
+            &.active,&:active{border-bottom-color:${theme[color].shade5};}
+          }
+        `
+      default:
+        return css`
+        border:1px solid transparent;
+        background:${theme[color].grad1};
+        color:${theme[color].btnColor1};
+        &:hover,&:focus{background:${theme[color].grad2};}
+        &.active,&:active{background:${theme[color].shade5};}
+        `
   }
-
-  return css`
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  `;
 };
 
-const getSizeStyles = (size: string) => {
+const getSizeStyles = (size?: string) => {
   switch (size) {
     case 'small':
       return css`
-        font-size: 12px;
-        padding: 10px 16px;
+        font-size: 1rem;
+        line-height:1.25rem;
+        padding: 0.75rem 1rem;
       `;
     case 'large':
       return css`
-        font-size: 16px;
-        padding: 12px 24px;
+        font-size: 1.5rem;
+        line-height:1.75rem;
+        padding: 0.75rem 1.75rem;
       `;
     default:
       return css`
-        font-size: 14px;
-        padding: 11px 20px;
+        font-size: 1.25rem;
+        line-height:1.5rem;  
+        padding:0.75rem 1.5rem;
+      `;
+  }
+};
+const getShape = (shape?: string,color:keyof typeof theme="orange") => {
+  switch (shape) {
+    case 'circle':
+      return css`
+        border-radius:50%;
+        padding:0;
+        height:2em;
+        width:2em;
+      `;
+    case 'rounded':
+      return css`
+        border-radius:3rem;
+        box-shadow:0.4rem 0.4rem 1.85rem ${theme[color].shadow}; 
+      `;
+    default:
+      return css`
+         border-radius:0.5rem;
+         background-color:inherit;
+         color:inherit;
+         border-color:inherit;
       `;
   }
 };
 
 export const StyledButton = styled.button<{
-  backgroundColor?: string;
-  primary: boolean;
-  size: string;
+  size?: string;
+  shape?: string;
+  btntype?:string;
+  theme?:string;
 }>`
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
+  font-weight: 600;
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-
-  ${(props) => getTypeStyles(props.primary)};
+  text-align:center;
+  line-height:initial;
+  outline:none;
   ${(props) => getSizeStyles(props.size)};
-
-  background-color: ${(props) => props.backgroundColor};
+  ${(props) => getShape(props.shape,props.theme)};
+  ${(props) => getDesignTypeStyles(props.btntype,props.theme)};
+  &.btn-primary{
+    &:hover{background:${theme.orange.shade5};}
+  }
 `;
