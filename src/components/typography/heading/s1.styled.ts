@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {textTransform,fontWeight,fontStyle} from './typography.styled';
-import {theme} from '../../../globalStyles';
+import {theme} from '../../../theme';
 
 export const S1 = styled.h4<{
   Fcase?:string;
@@ -9,8 +9,8 @@ export const S1 = styled.h4<{
   }>`
     font-size:1.5rem;
     line-height:1.875rem;
-    color:${theme.primary.gray7};
-    font-family:${theme.primary.font};
+    color:var(--gray7);
+    font-family:var(--font);
     ${(props) => textTransform(props.Fcase)};
     ${(props) => fontWeight(props.Fweight)};
     ${(props) => fontStyle(props.Fstyle)};

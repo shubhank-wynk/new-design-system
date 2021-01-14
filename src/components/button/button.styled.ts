@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components';
-import {theme} from '../../globalStyles';
+import {theme} from '../../theme';
 
 const getDesignTypeStyles = (type?: string,color:keyof typeof theme="orange") => {
   switch(type){
       case 'secoundary' :
-        console.log(color);
         return css`
           &.btn-secoundary{
             background:transparent;
@@ -38,7 +37,7 @@ const getDesignTypeStyles = (type?: string,color:keyof typeof theme="orange") =>
         return css`
         border:1px solid transparent;
         background:${theme[color].grad1};
-        color:${theme.primary.white};
+        color:${theme[color].btnColor1};
         &:hover,&:focus{background:${theme[color].grad2};}
         &.active,&:active{background:${theme[color].shade5};}
         `
@@ -103,7 +102,7 @@ export const StyledButton = styled.button<{
   line-height:initial;
   outline:none;
   ${(props) => getSizeStyles(props.size)};
-  ${(props) => getShape(props.shape)};
+  ${(props) => getShape(props.shape,props.theme)};
   ${(props) => getDesignTypeStyles(props.btntype,props.theme)};
   &.btn-primary{
     &:hover{background:${theme.orange.shade5};}
