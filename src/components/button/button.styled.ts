@@ -3,31 +3,44 @@ import {theme} from '../../globalStyles';
 
 const getDesignTypeStyles = (type?: string,color:keyof typeof theme="orange") => {
   switch(type){
-
       case 'secoundary' :
         console.log(color);
         return css`
-          background:transparent;
-          color:${theme[color].shade2};
-        
-          border:1px solid inherit;
+          &.btn-secoundary{
+            background:transparent;
+            color:${theme[color].shade5};
+            border:1px solid ${theme[color].shade5};
           &:hover,&:focus{
-          background-color:${theme[color].shade2};
-          color:${theme[color].shade2};
+          background-color:${theme[color].shade1};
+          color:${theme[color].shade4};
+          border-color:${theme[color].shade4};
         }
-        &:active,.active{background-color:${theme.primary.orange3};
-        color:${theme.primary.orange4};  
+        &:active,.active{background-color:${theme[color].shade2};
+        color:${theme[color].shade5};
+        border-color:${theme[color].shade5};
       }
+    }
         `
       case 'tertiary' :
         return css`
           background:transparent;
-          color:${theme.primary.orange4};
-          border-color:transparent;
+          color:${theme[color].shade4};
+          border:none;
+          border-bottom:1px solid transparent;
+          padding:0.5rem 0.75rem;
+          border-radius:0;
+          &.btn-tertiary{
+            &:hover,&:focus{border-bottom-color:${theme[color].shade5};}
+            &.active,&:active{border-bottom-color:${theme[color].shade5};}
+          }
         `
       default:
         return css`
         border:1px solid transparent;
+        background:${theme[color].grad1};
+        color:${theme.primary.white};
+        &:hover,&:focus{background:${theme[color].grad2};}
+        &.active,&:active{background:${theme[color].shade5};}
         `
   }
 };
@@ -54,19 +67,19 @@ const getSizeStyles = (size?: string) => {
       `;
   }
 };
-const getShape = (shape?: string) => {
+const getShape = (shape?: string,color:keyof typeof theme="orange") => {
   switch (shape) {
     case 'circle':
       return css`
         border-radius:50%;
+        padding:0;
         height:2em;
         width:2em;
       `;
     case 'rounded':
       return css`
         border-radius:3rem;
-        box-shadow: 0.375rem 0.375rem  1.875rem ${theme.primary.orangeShadow} ;
-        
+        box-shadow:0.4rem 0.4rem 1.85rem ${theme[color].shadow}; 
       `;
     default:
       return css`
@@ -77,8 +90,6 @@ const getShape = (shape?: string) => {
       `;
   }
 };
-
-
 
 export const StyledButton = styled.button<{
   size?: string;
@@ -95,6 +106,6 @@ export const StyledButton = styled.button<{
   ${(props) => getShape(props.shape)};
   ${(props) => getDesignTypeStyles(props.btntype,props.theme)};
   &.btn-primary{
-    &:hover{background:red;}
+    &:hover{background:${theme.orange.shade5};}
   }
 `;
