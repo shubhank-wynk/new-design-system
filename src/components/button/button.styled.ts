@@ -101,6 +101,7 @@ export const StyledButton = styled.button<{
   text-align:center;
   line-height:initial;
   outline:none;
+  font-family:inherit;
   ${(props) => getSizeStyles(props.size)};
   ${(props) => getShape(props.shape,props.theme)};
   ${(props) => getDesignTypeStyles(props.btntype,props.theme)};
