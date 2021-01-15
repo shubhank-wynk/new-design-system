@@ -84,3 +84,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 ## npm run storybook
+
+## curl -X POST -d {} https://api.netlify.com/build_hooks/5ff81f106176d08d47b1ef1b 

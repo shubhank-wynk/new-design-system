@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {textTransform,fontWeight,fontStyle} from './heading/typography.styled';
-import {theme} from '../../theme';
 
 export const B1 = styled.p<{
   Fcase?:string;
