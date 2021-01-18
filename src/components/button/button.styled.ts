@@ -74,6 +74,9 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
         padding:0;
         height:2em;
         width:2em;
+        span{
+          svg{padding-left:0 !important ;padding-right:0 !important;}
+        }
       `;
     case 'rounded':
       return css`
@@ -108,4 +111,8 @@ export const StyledButton = styled.button<{
   &.btn-primary{
     &:hover{background:${theme.orange.shade5};}
   }
+  span{
+      &:first-child{svg{padding-right:0.65rem;}}
+      &:last-child{svg{padding-left:0.65rem;}}
+    }
 `;
