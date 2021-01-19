@@ -6,9 +6,9 @@ export default {
    title: 'Row',
    argTypes: {
       label: { control: 'Row' },
-      justify :{ control: { type: 'inline-radio', options: ['end', 'center', 'space-around','space-between','default'] } },
+      justify :{ control: { type: 'inline-radio', options: ['center', 'space-around','space-between','default'] } },
       wrap:{control:{type:"inline-radio",options:['wrap',"nowrap","wrap-reverse",]}},
-      gutter:{control:{type:"inline-radio",options:['sm',"lg","md",'default']}},
+      // gutter:{control:{type:"inline-radio",options:['sm',"lg","md",'default']}},
       align:{control:{type:"inline-radio",options:['top',"bottom",'default']}},
    }
    }
@@ -24,9 +24,9 @@ export default {
 
       return(
          <Row align={args.align} gutter={args.gutter} justify={args.justify} wrap={args.wrap}>
-           <Col span={3}><Placeholder>{args.label}</Placeholder></Col> 
-           <Col span={4}><Placeholder>{args.label}</Placeholder></Col> 
-           <Col span={5}><Placeholder>{args.label}</Placeholder></Col> 
+           <Col span={4} gutter={1}><Placeholder>{args.label}</Placeholder></Col> 
+           <Col span={3} gutter={1}><Placeholder>{args.label}</Placeholder></Col> 
+           <Col span={4} gutter={1}><Placeholder>{args.label}</Placeholder></Col> 
          </Row>
       )
       

@@ -1,22 +1,48 @@
 import React from 'react';
-import {GrayShade,} from './colors.styled';
+import { Col } from '../grid/col.styled';
+import { Row } from '../grid/row.styled';
+import {GrayShade,TealShade,OrangeShade} from './colors.styled';
 
 
 export default {
-   title: 'Color Gray',
-   component: GrayShade,
-   argTypes: {
-      gray:{control:{type:"inline-radio", options:["gray6","gray5","gray4","gray3","gray2","gray1","default"]}},
-   },
+   title: 'Colours',
+
  }
- type args = {
-    gray?: string,
-    teal?:string,
-    orange?:string,
-    };
- export  const Gray = (args:args) => {
+
+ export  const Colors = () => {
     return(
-       <GrayShade  color = {args.gray}/>
+       <Row>
+          <Col span={4}>
+            <GrayShade  color = 'gray7'/>
+            <GrayShade  color = 'gray6'/>
+            <GrayShade  color = 'gray5'/>
+            <GrayShade  color = 'gray4'/>
+            <GrayShade  color = 'gray3'/>
+            <GrayShade  color = 'gray2'/>
+            <GrayShade  color = 'gray1'/>
+          </Col>
+          <Col span={4}>
+
+            <TealShade  color = 'teal6'/>
+            <TealShade  color = 'teal5'/>
+            <TealShade  color = 'teal4'/>
+            <TealShade  color = 'teal3'/>
+            <TealShade  color = 'teal2'/>
+            <TealShade  color = 'teal1'/>
+            <TealShade  color = 'teal7'/>
+          </Col>
+          <Col span={4}>
+
+            <OrangeShade  color = 'orange5'/>
+            <OrangeShade  color = 'orange4'/>
+            <OrangeShade  color = 'orange3'/>
+            <OrangeShade  color = 'orange2'/>
+            <OrangeShade  color = 'orange1'/>
+            <OrangeShade  color = 'orange7'/>
+            <OrangeShade  color = 'orange6'/>
+          </Col>
+       </Row>
+      
     )
  }
- Gray.args = { color:'gray6' }
+ Colors.args = { color:'gray6' }

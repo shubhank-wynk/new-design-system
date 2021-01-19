@@ -17,10 +17,6 @@ const Align  = (align?:string ) => {
 }
 const Justify  = (justify?:string ) => {
    switch(justify){
-      case  ' end':
-         return css`
-          justify-content:end;
-         `
       case  'center':
          return css`
          justify-content:center;

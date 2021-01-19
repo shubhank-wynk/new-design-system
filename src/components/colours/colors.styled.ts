@@ -19,11 +19,11 @@ const Gray = (gray?:string) => {
           return css`
           background:#E5E5E5;
       `;
-      case 'grad2':
+      case 'gray2':
           return css`
           background:#F5F5F5;
       `;
-      case 'grad1':
+      case 'gray1':
           return css`
           background:#F9F9F9;
       `;
@@ -112,22 +112,22 @@ const Orange = (orange?:string) => {
 const GrayShade = styled.div <{
 color?:string;
 }>`
-width:100px;
-height:100px;
+width:100%;
+height:50px;
 ${(props) => Gray(props.color)};
 `
 const TealShade = styled.div <{
 color?:string;
 }>`
-width:100px;
-height:100px;
+width:100%;
+height:50px;
 ${(props) => Teal(props.color)};
 `
 const OrangeShade = styled.div <{
 color?:string;
 }>`
-width:100px;
-height:100px;
+width:100%;
+height:50px;
 ${(props) => Orange(props.color)};
 `
 
