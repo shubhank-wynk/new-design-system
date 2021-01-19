@@ -1,8 +1,8 @@
 import styled,{css} from 'styled-components';
 
 
-const Gray = (color?:string) => {   
-   switch (color) {
+const Gray = (gray?:string) => {   
+   switch (gray) {
       case 'gray6':
           return css`
           background:#555555;
@@ -19,11 +19,11 @@ const Gray = (color?:string) => {
           return css`
           background:#E5E5E5;
       `;
-      case 'gray2':
+      case 'grad2':
           return css`
           background:#F5F5F5;
       `;
-      case 'gray1':
+      case 'grad1':
           return css`
           background:#F9F9F9;
       `;
@@ -33,8 +33,8 @@ const Gray = (color?:string) => {
       `;
    }
 }
-const Teal = (color?:string) => {   
-   switch (color) {
+const Teal = (teal?:string) => {   
+   switch (teal) {
       case 'teal6':
           return css`
           background:#224D5B;
@@ -59,14 +59,22 @@ const Teal = (color?:string) => {
           return css`
           background:#F4F9FB;
       `;
+      case 'grad1':
+          return css`
+          background:linear-gradient(96.45deg, #698F9A 0%, #255A68 100%);
+      `;
+      case 'grad2':
+          return css`
+          background:linear-gradient(180deg, #255A68 0%, #698F9A 100%);
+      `;
       default:
           return css`
           background:#E6F1F4;
       `;
    }
 }
-const Orange = (color?:string) => {   
-   switch (color) {
+const Orange = (orange?:string) => {   
+   switch (orange) {
       case 'orange5':
           return css`
           background:#EF420F;
@@ -87,9 +95,17 @@ const Orange = (color?:string) => {
           return css`
           background:#FFF3F0;
       `;
+      case "grad1" :
+          return css `
+          background:linear-gradient(96.45deg, #FF6E65 0%, #FF8957 100%);
+          `
+      case "grad2" :
+          return css `
+          background:linear-gradient(96.45deg, #FF5D52 0%, #FF7940 100%);
+          `
       default:
           return css`
-          background:#E6F1F4;
+          background:#FF6639;
       `;
    }
 }

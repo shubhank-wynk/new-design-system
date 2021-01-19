@@ -1,14 +1,13 @@
-import React from 'react';
-import styled , {css} from 'styled-components';
+import {css} from 'styled-components';
 const Align  = (align?:string ) => {
    switch(align){
       case  ' top':
          return css`
-         vertical-align:top;
+         align-items: flex-start;
          `
       case  'bottom':
          return css`
-         vertical-align:bottom;
+         align-items: flex-end;
          `
          default :
          return css`

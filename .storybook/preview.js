@@ -4,6 +4,7 @@ export const parameters = {
 
 };
 // .storybook/preview.js
+import '../src/index.css';
 import {GlobalStyle} from '../src/global';
 
 export const decorators = [

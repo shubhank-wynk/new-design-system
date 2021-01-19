@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col, Placeholder } from '../col.styled';
 import {Row} from '../row.styled';
 
 export default {
@@ -23,7 +24,9 @@ export default {
 
       return(
          <Row align={args.align} gutter={args.gutter} justify={args.justify} wrap={args.wrap}>
-            {args.label}
+           <Col span={3}><Placeholder>{args.label}</Placeholder></Col> 
+           <Col span={4}><Placeholder>{args.label}</Placeholder></Col> 
+           <Col span={5}><Placeholder>{args.label}</Placeholder></Col> 
          </Row>
       )
       
