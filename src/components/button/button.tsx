@@ -9,7 +9,7 @@ const Button: React.FC<Props> = ({
   theme= theme || "orange";
   return (
     <StyledButton className={`btn-${type}`}  theme={theme} size={size} shape={shape} btntype={type}>
-      {iconLeft}{label} {iconRight}
+      {iconLeft}{label}{iconRight}
     </StyledButton>
   );
 };
