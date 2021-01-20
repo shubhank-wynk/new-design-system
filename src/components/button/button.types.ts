@@ -6,6 +6,8 @@ type Props = {
   label: string;
   theme?:string;
   type?:string;
+  style?:object;
+  className?:string;
   iconLeft?:JSX.Element;
   iconRight?:JSX.Element;
 };
