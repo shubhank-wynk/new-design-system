@@ -10,13 +10,14 @@ const Padding = () => {
       padding-left:${2}rem;
       padding-right:${2}rem;
    }
-   @media (min-width:1440px){
-      padding-left:${2.25}rem;
-      padding-right:${2.25}rem;
-   }
+   
    @media (min-width:1280px){
       padding-left:${2}rem;
       padding-right:${2}rem;
+   }
+   @media (min-width:1440px){
+      padding-left:${2.25}rem;
+      padding-right:${2.25}rem;
    }
    @media (min-width:1920px){
       padding-left:${2.625}rem;
