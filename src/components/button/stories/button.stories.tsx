@@ -27,7 +27,7 @@ Circle.args = {
   label: <AddOutlined />,
   shape: 'circle',
 };
-export const Rounded = (args: Props) => <Button {...args}  />;
+export const Rounded = (args: Props) => <Button  {...args}  />;
 Rounded.args = {
   iconLeft:<UserProfileOutlined/>,
   iconRight:<UserProfileOutlined/>,

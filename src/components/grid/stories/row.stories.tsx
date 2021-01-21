@@ -32,6 +32,6 @@ export default {
       
    };
    Rows.args={
-      label: 'Row',
+      label: 'Column',
     };
    
