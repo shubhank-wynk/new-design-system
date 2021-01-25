@@ -22,21 +22,21 @@ export const Containers =  (args:Props) => {
              {args.label}
              <Row style={{background:"var(--gray3)",marginBottom:"1rem"}}>Row</Row>
          <Row style={{marginBottom:"1rem"}}>
-            <Col span={2} gutter={1} style={{paddingLeft:0}}><VioletShade>Column 2</VioletShade></Col>
-            <Col span={3} gutter={1}><GrayShade color="gray3">Column 3</GrayShade></Col>
-            <Col span={6} gutter={1}><OrangeShade>Column 6</OrangeShade></Col>
-            <Col span={1} gutter={1} style={{paddingRight:0}}><TealShade color="tealgrad1">Column 1</TealShade></Col>
+            <Col span={4} gutter={1}><GrayShade color="gray5">Columns 4</GrayShade></Col>
+            <Col span={8} gutter={1}><GrayShade color="gray5">Columns 8</GrayShade></Col>
          </Row>
          <Row style={{marginBottom:"1rem"}}>
-            <Col span={5} gutter={0}><BlueShade>column 5</BlueShade></Col>
-            <Col span={7} gutter={0}><OrangeShade  color = 'orangeGrad2'>Column 7</OrangeShade></Col>
+         <Col span={6} gutter={1}><GrayShade color="gray5">Columns 6</GrayShade></Col>
+            <Col span={6} gutter={1}><GrayShade color="gray5">Columns 6</GrayShade></Col>
+         </Row>
+         <Row style={{marginBottom:"1rem"}}>
+         <Col span={7} gutter={1}><GrayShade color="gray5">Columns 7</GrayShade></Col>
+            <Col span={5} gutter={1}><GrayShade color="gray5">Columns 5</GrayShade></Col>
          </Row>
          <Row>
-            <Col span={6} gutter={1} style={{paddingLeft:0}} ><GrayShade color="gray3">column 6</GrayShade></Col>
-            <Col span={6} gutter={1} style={{paddingRight:0}}><GrayShade  color = 'gray4'>Column 6</GrayShade></Col>
+            <Col span={2} gutter={0} style={{paddingLeft:0}} ><GrayShade color="gray4">columns 2</GrayShade></Col>
+            <Col span={10} gutter={0} style={{paddingRight:0}}><GrayShade  color = 'gray3'>Columns 10</GrayShade></Col>
          </Row>
-     
-         
          </Container>
    )
 }

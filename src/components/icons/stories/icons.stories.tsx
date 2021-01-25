@@ -71,7 +71,7 @@ import {
   ThumbUpOutlined,
 } from '../outlined2';
 import {
-  CheckedFilled,
+  InfoFilled,
   CheckFilled,
   DropDownFilled,
   DropDownUpFilled,
@@ -105,6 +105,7 @@ import {
   TimeCircleTwoTone,
   VideoTwoTone,
   ViewsTwoTone,
+  CalendarTwoTone,
 } from '../two-tone';
 
 export default {
@@ -205,12 +206,11 @@ export const Filled = (args: args) => {
       <TriangleDownFilled />
       <TriangleUpFilled />
       {/* filed view 0 0 16 16 */}
-      <CheckedFilled />
+      <InfoFilled />
       <ErrorFilled/>
       <FilterStrokeFilled />
       <FilterClearFilled />
       <GridFilled />
-      <InfoNAFilled/>
       <InfoNAFilled/>
       <ListFilled/>
       <PauseFilled/>
@@ -241,6 +241,7 @@ export const TwoTone = (args: args) => {
       <TimeCircleTwoTone />
       <VideoTwoTone />
       <ViewsTwoTone />
+      <CalendarTwoTone />
     </div>
   );
 };

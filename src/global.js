@@ -53,8 +53,7 @@ import { createGlobalStyle } from 'styled-components';
   --orange:#FD756C;
   --yellow:#FF9F2E;
   --green:#00B998;
-
-  --white: "#FFFFFF";
+  --white: #FFF;
   
 
 }
