@@ -29,7 +29,7 @@ const getDesignTypeStyles = (type?: string,color:keyof typeof theme="orange") =>
           padding:0.5rem 0.75rem;
           border-radius:0;
           &.btn-tertiary{
-            &:hover,&:focus{border-bottom-color:${theme[color].shade5};}
+            &:hover,&:focus{border-bottom-color:${theme[color].shade4};}
             &.active,&:active{border-bottom-color:${theme[color].shade5};}
           }
         `
@@ -75,7 +75,7 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
         height:2em;
         width:2em;
         span{
-          svg{padding-left:0 !important ;padding-right:0 !important;}
+          svg{padding-left:0 !important ;padding-right:0 !important;margin-top:0.35rem;}
         }
       `;
     case 'rounded':
@@ -112,7 +112,7 @@ export const StyledButton = styled.button<{
     &:hover{background:${theme.orange.shade5};}
   }
   span{
-      &:first-child{svg{padding-right:0.65rem;}}
-      &:last-child{svg{padding-left:0.65rem;}}
+      &:first-child{svg{padding-right:0.5rem;}}
+      &:last-child{svg{padding-left:0.5rem;}}
     }
 `;

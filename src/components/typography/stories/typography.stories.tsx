@@ -8,6 +8,7 @@ import {S2} from '../heading/s2.styled';
 import {S3} from '../heading/s3.styled';
 import {B1} from '../b1.styled';
 import {B2} from '../b2.styled';
+import {B3} from '../b3.styled';
 export default {
   title: 'Typography',
     argTypes: {
@@ -23,7 +24,7 @@ export default {
     return(
       <div>
     <H1 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
+        {args.Flabel} (52px)
       </H1>
       </div>
     )
@@ -34,7 +35,7 @@ export default {
   export const Heading2 = (args :Props) =>{
     return(
     <H2 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
+        {args.Flabel} (44 PX)
       </H2>
     )
   };
@@ -44,7 +45,7 @@ export default {
   export const Heading3 = (args :Props) =>{
     return(
     <H3 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
+        {args.Flabel} (32px)
       </H3>
     )
   };
@@ -54,7 +55,7 @@ export default {
   export const Subtitle1 = (args :Props) =>{
     return(
     <S1 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
+        {args.Flabel} (24px)
       </S1>
     )
   };
@@ -64,7 +65,7 @@ export default {
   export const Subtitle2 = (args :Props) =>{
     return(
     <S2 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
+        {args.Flabel} (20px)
       </S2>
     )
   };
@@ -74,7 +75,7 @@ export default {
   export const Subtitle3 = (args :Props) =>{
     return(
     <S3 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
+        {args.Flabel} (18px)
       </S3>
     )
   };
@@ -85,8 +86,8 @@ export default {
   export const Body1 = (args :Props) =>{
     return(
     <B1 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
-      </B1>
+        {args.Flabel} (16px)
+      </B1> 
     )
   };
   Body1.args={
@@ -95,11 +96,21 @@ export default {
   export const Body2 = (args :Props) =>{
     return(
     <B2 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel}
+        {args.Flabel} (16px)
       </B2>
     )
   };
   Body2.args={
-    Flabel: 'Body21',
+    Flabel: 'Body2',
+  };
+  export const Body3 = (args :Props) =>{
+    return(
+    <B3 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
+        {args.Flabel} (12px)
+      </B3>
+    )
+  };
+  Body3.args={
+    Flabel: 'Body3',
   };
 
