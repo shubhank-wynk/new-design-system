@@ -4,7 +4,7 @@ import {Gutter,Wrap,Justify,Align} from './rowProps.styled';
 
 const Row = styled.div<{
    align?:string,
-   gutter?:string,
+   gutter?:number,
    justify?:string,
    wrap?:string,
 }>`

@@ -56,37 +56,37 @@ const Wrap = (wrap?:string) =>{
             `
    }
 }
-const Gutter = (gutter?:string) =>{
-   switch(gutter){
-      case 'sm':
-         return css`
-         @media (min-width:768px){
-            margin-left:-0.5rem;
-            margin-right:-0.5rem;
-         }
-         `
-      case 'md':
-         return css`
-          @media (min-width:1280px){
-            margin-left:-0.75rem;
-            margin-right:-0.75rem;
-         }
-         `
-      case 'lg':
-         return css`
-           @media (min-width:1920px){
-            margin-left:-1rem;
-            margin-right:-1rem;
-         }
-         `
-         default:
-            return css`
-            @media (min-width:1920px){
-             margin-left:-0.5rem;
-             margin-right:-0.5rem;
-          }
-          `
+const Gutter = (gutter:number =0) => {
+   return css `
+   @media (min-width:768px){
+      margin-left:${0.75*gutter/-2}rem;
+      margin-right:${0.75*gutter/-2}rem;
    }
+   @media (min-width:1440px){
+      margin-left:${1*gutter/-2}rem;
+      margin-right:${1*gutter/-2}rem;
+   }
+   @media (min-width:1920px){
+      margin-left:${1.5*gutter/-2}rem;
+      margin-right:${1.5*gutter/-2}rem;
+   }
+  
+   
+   >div{
+   @media (min-width:768px){
+      padding-left:${0.75*gutter/2}rem;
+      padding-right:${0.75*gutter/2}rem;
+   }
+   @media (min-width:1440px){
+      padding-left:${1*gutter/2}rem;
+      padding-right:${1*gutter/2}rem;
+   }
+   @media (min-width:1920px){
+      padding-left:${1.5*gutter/2}rem;
+      padding-right:${1.5*gutter/2}rem;
+   }
+   }
+   `
 }
 
 export {
