@@ -8,7 +8,7 @@ export default {
   title: 'Button',
   argTypes: {
     label: { control: 'text' },
-    shape: {control :{type : 'inline-radio', options:['circle','rounded','default']}},
+    shape: {control :{type : 'inline-radio', options:['circle','rounded','floating','default']}},
     size:  {control :{type: 'inline-radio', options: ['large', 'small','default'] } },
     type: {control :{type: 'inline-radio', options: ['secoundary','tertiary','default']}},
     theme: {control :{type: 'inline-radio', options: ['teal','orange']}},
@@ -32,6 +32,13 @@ Rounded.args = {
   iconLeft:<UserProfileOutlined/>,
   iconRight:<UserProfileOutlined/>,
   label: "Rounded",
+  shape: 'rounded',
+};
+export const Floating = (args: Props) => <Button  {...args}  />;
+Floating.args = {
+  iconLeft:<UserProfileOutlined/>,
+  iconRight:<UserProfileOutlined/>,
+  label: "Floating Button",
   shape: 'rounded',
 };
 export const Secoundary = (args: Props) => <Button {...args} />;

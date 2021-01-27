@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Span,Pull,Push, Offset, Gutter } from './columnProps.styled';
+import {Span,Pull,Push, Offset, } from './columnProps.styled';
 
 
 const Col = styled.div<{
@@ -19,7 +19,6 @@ ${(props) => Span(props.span)};
 ${(props) => Pull(props.pull)};
 ${(props) => Push(props.push)};
 ${(props) => Offset(props.offset)};
-${(props) => Gutter(props.gutter)};
 `
 const Placeholder = styled.div`
    background:#555555;

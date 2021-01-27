@@ -10,7 +10,6 @@ export default {
       pull:{control:{type:"range", min:1, max:12, step:1}},
       push:{control:{type:"range", min:1, max:12, step:1}},
       offset:{control:{type:"range", min:0, max:11, step:1}},
-      gutter:{control:{type:"range", min:0, max:5, step:0.5}},
    }
    }
 
@@ -25,8 +24,8 @@ type Props = {
    export const Column =  (args:Props) => {
 
       return(
-         <Row>
-             <Col span={args.span} pull={args.pull} push={args.push} offset={args.offset} gutter={args.gutter}><Placeholder>{args.label}</Placeholder></Col>
+         <Row gutter={args.gutter}>
+             <Col span={args.span} pull={args.pull} push={args.push} offset={args.offset} ><Placeholder>{args.label}</Placeholder></Col>
          </Row>
         
       )

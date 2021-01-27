@@ -81,6 +81,13 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
     case 'rounded':
       return css`
         border-radius:3rem;
+        padding : 1.5rem  1.5rem;
+        box-shadow:0.4rem 0.4rem 1.85rem ${theme[color].shadow}; 
+      `;
+    case 'floating':
+      return css`
+        border-radius:3rem;
+        padding : 1.5rem  1.5rem;
         box-shadow:0.4rem 0.4rem 1.85rem ${theme[color].shadow}; 
       `;
     default:
