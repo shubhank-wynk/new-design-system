@@ -96,7 +96,7 @@ export default {
   export const Body2 = (args :Props) =>{
     return(
     <B2 Fcase={args.Fcase} Fweight={args.Fweight} Fstyle={args.Fstyle}>
-        {args.Flabel} (16px)
+        {args.Flabel} (14px)
       </B2>
     )
   };

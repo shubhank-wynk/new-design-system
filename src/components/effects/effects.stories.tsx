@@ -15,7 +15,7 @@ export default {
   export const Effect1 = ( ) =>{
     return(
       <div>
-    <CardL1>Card L1</CardL1>
+      <CardL1>Card L1</CardL1>
       </div>
     )
   };

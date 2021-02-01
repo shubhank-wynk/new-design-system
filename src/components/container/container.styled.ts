@@ -37,6 +37,6 @@ const Padding = (padding:number=2) => {
     margin-right: auto;
     ${(props) => Padding(props.padding)};
 `
-export {
+export  {
    Container
 }
