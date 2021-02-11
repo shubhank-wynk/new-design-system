@@ -52,7 +52,7 @@ const Wrap = (wrap?:string) =>{
          `
          default:
             return css`
-            flex-wrap:initial;
+            flex-wrap:wrap;
             `
    }
 }

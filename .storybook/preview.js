@@ -15,3 +15,16 @@ export const decorators = [
     </>
   ),
 ];
+
+export default {
+  title: 'Button',
+  parameters: {
+    backgrounds: {
+      default: 'teal',
+      values: [
+        { name: 'teal', value: 'inear-gradient(96.45deg, #698F9A 0%, #255A68 100%)' },
+        { name: 'facebook', value: '#3b5998' },
+      ],
+    },
+  },
+};
