@@ -51,9 +51,10 @@ const getSizeStyles = (size?: string) => {
   switch (size) {
     case 'small':
       return css`
-        font-size: 0.85rem;	
-        line-height:0.85rem;	
-        padding: 0.5rem 0.75rem;
+        font-size: 1rem;	
+        line-height:1.5rem;	
+        padding: 0.5rem 1rem;
+        height:2.5rem;
       `;
     case 'large':
       return css`
@@ -64,8 +65,9 @@ const getSizeStyles = (size?: string) => {
     default:
       return css`
         font-size: 1.25rem;
-        line-height:1.5rem;  
+        line-height:1.25rem;  
         padding:0.75rem 1.5rem;
+        height:3rem;
       `;
   }
 };
@@ -75,16 +77,15 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
       return css`
         border-radius:50%;
         padding:0;
-        height:2em;
-        width:2em;
+        height:3rem;
+        width:3rem;
         span{
-          svg{padding-left:0 !important ;padding-right:0 !important;margin-top:0.35rem;}
+          svg{font-size:1.5rem;line-height:1.5rem;padding-left:0 !important ;padding-right:0 !important;margin-top:0.25rem;}
         }
       `;
     case 'rounded':
       return css`
-        border-radius:3rem;
-        padding : 1.5rem  1.5rem;
+        border-radius:1.25rem;
         background-color:${theme[color].rounded};
         :hover,:focus{background-color:${theme[color].roundedF}; } 
         :active,.active{background-color:${theme[color].roundedA}; } 
@@ -95,6 +96,7 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
         padding : 1.5rem  1.5rem;
         box-shadow:0.4rem 0.4rem 1.85rem ${theme[color].shadow}; 
         font-size:1.5rem;
+        height:4.5rem;
       `;
     default:
       return css`
@@ -118,6 +120,7 @@ export const StyledButton = styled.button<{
   line-height:initial;
   outline:none;
   font-family:inherit;
+  box-sizing:border-box;
   ${(props) => getSizeStyles(props.size)};
   ${(props) => getShape(props.shape,props.theme)};
   ${(props) => getDesignTypeStyles(props.btntype,props.theme)};
