@@ -18,7 +18,7 @@ export const theme = {
     white:"#FF6639",
     defaultText:"#fff",
     rounded:'',
-    roundedF:'#FFF3F0',
+    roundedF:'linear-gradient(96.45deg, #FF5D52 0%, #FF7940 100%)',
     roundedA:'#FFE6DF',
 },
   teal:{

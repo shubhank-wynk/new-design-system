@@ -15,10 +15,12 @@ export default {
   },
 };
 
-export const Small = (args: Props) => <Button {...args} />;
-Small.args = {
+export const Default = (args: Props) => <Button {...args} />;
+Default.args = {
   label: 'Button',
-  size: 'small',
+  size: 'default',
+  theme: 'orange',
+  type:'default',
   iconLeft:<UserProfileOutlined/>,
   iconRight:<UserProfileOutlined/>,
 };
@@ -26,6 +28,8 @@ export const Circle = (args: Props) => <Button {...args} />;
 Circle.args = {
   label: <AddOutlined />,
   shape: 'circle',
+  theme:"orange",
+
 };
 export const Rounded = (args: Props) => <Button  {...args}  />;
 Rounded.args = {
@@ -33,13 +37,19 @@ Rounded.args = {
   iconRight:<UserProfileOutlined/>,
   label: "Rounded",
   shape: 'rounded',
+  theme:"orange",
+  type:'default',
+
 };
 export const Floating = (args: Props) => <Button  {...args}  />;
 Floating.args = {
   iconLeft:<UserProfileOutlined/>,
   iconRight:<UserProfileOutlined/>,
   label: "Floating Button",
-  shape: 'rounded',
+  shape:"floating",
+  size:"default",
+  theme:"orange",
+  type:"default",
 };
 export const Secoundary = (args: Props) => <Button {...args} />;
 Secoundary.args = {
