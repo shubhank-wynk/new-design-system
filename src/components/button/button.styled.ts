@@ -26,7 +26,7 @@ const getDesignTypeStyles = (type?: string,color:keyof typeof theme="orange") =>
           color:${theme[color].tertiaryText};
           border:none;
           border-bottom:1px solid transparent;
-          padding:0.5rem 0.75rem;
+          padding:0.366rem 0.75rem;
           border-radius:0;
           &.btn-tertiary{
             &:hover,&:focus{border-bottom-color:${theme[color].tertiaryText};}
@@ -53,8 +53,7 @@ const getSizeStyles = (size?: string) => {
       return css`
         font-size: 1rem;	
         line-height:1.5rem;	
-        padding: 0.5rem 1rem;
-        height:2.5rem;
+        padding: 0.288rem 1rem;
       `;
     case 'large':
       return css`
@@ -65,9 +64,9 @@ const getSizeStyles = (size?: string) => {
     default:
       return css`
         font-size: 1.25rem;
-        line-height:1.25rem;  
-        padding:0.75rem 1.5rem;
-        height:3rem;
+        line-height:1.5rem;  
+        padding: 0.334rem 1.5rem;
+        span.icon{font-size:1.5rem;line-height:1.5rem;}
       `;
   }
 };
@@ -93,10 +92,9 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
     case 'floating':
       return css`
         border-radius:3rem;
-        padding : 1.5rem  1.5rem;
+        padding : 1.084rem 1.5rem;
         box-shadow:0.4rem 0.4rem 1.85rem ${theme[color].shadow}; 
         font-size:1.5rem;
-        height:4.5rem;
       `;
     default:
       return css`
