@@ -1,21 +1,27 @@
 import React from 'react';
+import styled from 'styled-components';
 interface Props {
    style?:object,
    onClick?:() => void,
 }
-
+const IconWrapper = styled.span`
+   vertical-align: middle;
+   display:inline-block;
+   margin:0.236em;
+   height:1em;
+`
 const SvgIcon = (WrappedComponent:React.FC) => {
    return class extends React.Component <Props> {
     
       render() {
         
          let {style,onClick} = this.props;
-         const _Style = {verticalAlign: 'middle', margin:"0.236em",...style}
+         const _Style = {...style}
         return(
            <>
-         <span style={ _Style} onClick={ onClick}>
+         <IconWrapper className="icon" style={ _Style} onClick={ onClick}>
            <WrappedComponent {...this.props} />
-           </span>
+           </IconWrapper>
            </>
         );
       }
