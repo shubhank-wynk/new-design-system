@@ -1,12 +1,11 @@
-import React, { JSXElementConstructor } from 'react'
-
- type Props = {
-   onChange:(key:string) => void;
-    tabTitle: String;
-    tabIcon?:JSX.Element;
-    activeKey:string;
-    children:any;
-    currentKey:string;
-
+export interface TabProps {
+  onChange: (key: string) => void;
+  activeKey: string;
+  children?: any;
 }
-export default Props; 
+
+export interface TabPaneProps extends TabProps {
+  tabIcon?: JSX.Element;
+  tabHeader: string;
+  tabKey: string;
+}
