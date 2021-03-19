@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 const Tab  = styled.div`
   width:100;
   margin:0;
@@ -38,9 +38,10 @@ background:transparent;
 padding:0.4rem 1rem;
 border-radius:0.5rem;
 color:var(--teal5);
+&:hover,&:focus{cursor: pointer;}
 .icon{color:var(--teal3);}
 &.active{background-color:var(--teal1);
-.icon{color:var(--eal5);}
+.icon{color:var(--teal5);}
 }
 `
 

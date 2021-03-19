@@ -65,7 +65,7 @@ const getSizeStyles = (size?: string) => {
       return css`
         font-size: 1.25rem;
         line-height:1.5rem;  
-        padding: 0.334rem 1.5rem;
+        padding: 0.21rem 1.5rem;
         span.icon{font-size:1.5rem;line-height:1.5rem;}
       `;
   }

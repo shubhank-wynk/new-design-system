@@ -33,9 +33,12 @@ export const Containers =  (args:Props) => {
          <Col span={7}><GrayShade color="gray5">Columns 7</GrayShade></Col>
             <Col span={5}><GrayShade color="gray5">Columns 5</GrayShade></Col>
          </Row>
-         <Row>
+         <Row gutter={1}>
             <Col span={2} ><GrayShade color="gray4">columns 2</GrayShade></Col>
             <Col span={10} ><GrayShade  color = 'gray3'>Columns 10</GrayShade></Col>
+            <Col span={12} ><GrayShade  color = 'gray3'>Columns 12</GrayShade></Col>
+            <Col span={12} ><GrayShade  color = 'gray3'>Columns 12</GrayShade></Col>
+
          </Row>
          </Container>
    )

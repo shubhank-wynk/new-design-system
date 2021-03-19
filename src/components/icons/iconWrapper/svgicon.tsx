@@ -8,7 +8,6 @@ const IconWrapper = styled.span`
    vertical-align: middle;
    display:inline-block;
    margin:0.236em;
-   height:1em;
 `
 const SvgIcon = (WrappedComponent:React.FC) => {
    return class extends React.Component <Props> {

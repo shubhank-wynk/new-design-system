@@ -17,7 +17,7 @@ export const Tab1 = () => {
 
   return (
     <div>
-      <Tabs activeKey={currentKey} onChange={onChange}>
+      <Tabs activeKey={currentKey} onChange={onChange} tabBarExtraContent={<p>cilter/selct dropdown list</p>}>
         <TabPane tabIcon={<UploadingOutlined />} tabKey="0" tabHeader="Tab1">
           Content of TabTwo 1
         </TabPane>
@@ -25,6 +25,9 @@ export const Tab1 = () => {
           Content of TabTwo 2
         </TabPane>
         <TabPane tabIcon={<UserProfileOutlined />} tabKey="2" tabHeader="Tab3">
+          Content of TabThree 3
+        </TabPane>
+        <TabPane tabIcon={<UserProfileOutlined />} tabKey="4" tabHeader="Tab4">
           Content of TabThree 3
         </TabPane>
       </Tabs>
