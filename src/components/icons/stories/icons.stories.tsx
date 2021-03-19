@@ -79,12 +79,12 @@ import {
   FilterClearFilled,
   FilterStrokeFilled,
   GridFilled,
-  InfoNAFilled,
   ListFilled,
   PauseFilled,
   PlayFilled,
   TriangleDownFilled,
   TriangleUpFilled,
+  UnverifiedFilled,
 } from '../filled';
 import {
   UsersTwoTone,
@@ -211,7 +211,7 @@ export const Filled = (args: args) => {
       <FilterStrokeFilled />
       <FilterClearFilled />
       <GridFilled />
-      <InfoNAFilled/>
+      <UnverifiedFilled/>
       <ListFilled/>
       <PauseFilled/>
       <PlayFilled/>
