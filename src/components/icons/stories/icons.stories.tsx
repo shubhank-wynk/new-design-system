@@ -52,6 +52,9 @@ import {
   WifiOffOutlined,
   WifiOutlined,
   DocumentSearcchOutlined,
+  PublishedOutlined,
+  RevertBackOutlined1,
+  PodcastOutlined
 } from '../outlined';
 
 import {
@@ -69,6 +72,7 @@ import {
   TextItalicOutlined,
   ThumbDownOutlined,
   ThumbUpOutlined,
+  EnrichedOutlined,
 } from '../outlined2';
 import {
   InfoFilled,
@@ -171,7 +175,9 @@ export const Outlined = (args: args) => {
       <WaitingOutlined />
       <WifiOffOutlined />
       <WifiOutlined />
-
+      <PublishedOutlined />
+      <RevertBackOutlined1 />
+      <PodcastOutlined/>
       {/* view box  0 0 16 16 icons outlined */}
       <AlertOutlined />
       <AlertTriangleOutlined />
@@ -192,6 +198,7 @@ export const Outlined = (args: args) => {
       <TextItalicOutlined/>
       <ThumbUpOutlined />
       <ThumbDownOutlined />
+      <EnrichedOutlined/>
     </div>
   );
 };

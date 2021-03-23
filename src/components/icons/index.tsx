@@ -49,7 +49,11 @@ export {   AddOutlined,
    UserUnverifyOutlined,
    WifiOffOutlined,
    WifiOutlined,
-   DocumentSearcchOutlined,} from './outlined';
+   DocumentSearcchOutlined,
+   PublishedOutlined,
+   RevertBackOutlined1,
+   PodcastOutlined,
+  } from './outlined';
 
 
    export { AlertOutlined, AlertTriangleOutlined, CodeSnippetOutlined, CopyOutlined,
@@ -65,7 +69,8 @@ export {   AddOutlined,
       TextBoldOutlined,
       TextItalicOutlined,
       ThumbDownOutlined,
-      ThumbUpOutlined,} from './outlined2';
+      ThumbUpOutlined,
+      EnrichedOutlined} from './outlined2';
 
       export {
          InfoFilled,
