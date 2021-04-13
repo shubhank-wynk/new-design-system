@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const IconView =  styled.div`
-  .icon{margin-right:0.5rem;
-  }
-`
+
 import {
   AddOutlined,
   ArrowDownOutlined,
@@ -118,7 +115,10 @@ import {
   CalendarTwoTone,
   ExperimentsTwoTone,
 } from '../two-tone';
-
+const IconView =  styled.div`
+  .icon{margin-right:0.5rem;
+  }
+`
 export default {
   title: 'Icons',
   argTypes: {
