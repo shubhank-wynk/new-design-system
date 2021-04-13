@@ -11,7 +11,7 @@ const Button: React.FC<Props & HtmlElement> = ({
   className = className || "";
   return (
     <StyledButton className={`btn-${type}`+ ` ` +  className}  theme={theme} size={size} shape={shape} btntype={type} style={style} {...props}>
-      {iconLeft}{props.children}{label}{iconRight}
+      <span className="iconLeft">{iconLeft}</span><span className="label">{props.children}{label}</span><span className="iconRight">{iconRight}</span>
     </StyledButton>
   );
 };

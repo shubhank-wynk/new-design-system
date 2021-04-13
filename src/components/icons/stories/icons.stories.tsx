@@ -1,4 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const IconView =  styled.div`
+  .icon{margin-right:0.5rem;
+  }
+`
 import {
   AddOutlined,
   ArrowDownOutlined,
@@ -110,6 +116,7 @@ import {
   VideoTwoTone,
   ViewsTwoTone,
   CalendarTwoTone,
+  ExperimentsTwoTone,
 } from '../two-tone';
 
 export default {
@@ -122,7 +129,7 @@ export default {
 type args = { fontSize: string; color: string };
 export const Outlined = (args: args) => {
   return (
-    <div style={{ ...args }}>
+    <IconView style={{ ...args }}>
       <AddOutlined />
       <ArrowDownOutlined />
       <ArrowUpOutlined />
@@ -199,14 +206,14 @@ export const Outlined = (args: args) => {
       <ThumbUpOutlined />
       <ThumbDownOutlined />
       <EnrichedOutlined/>
-    </div>
+    </IconView>
   );
 };
 Outlined.args = { fontSize: '24px', color: '#171725' };
 
 export const Filled = (args: args) => {
   return (
-    <div style={{ ...args }}>
+    <IconView style={{ ...args }}>
       <CheckFilled />
       <DropDownFilled />
       <DropDownUpFilled />
@@ -222,14 +229,14 @@ export const Filled = (args: args) => {
       <ListFilled/>
       <PauseFilled/>
       <PlayFilled/>
-    </div>
+    </IconView>
   );
 };
 Filled.args = { fontSize: '24px', color: '#171725' };
 
 export const TwoTone = (args: args) => {
   return (
-    <div style={{ ...args }}>
+    <IconView style={{ ...args }}>
       <UsersTwoTone />
       <DocumentTwoTone />
       <ImageTwoTone />
@@ -249,7 +256,9 @@ export const TwoTone = (args: args) => {
       <VideoTwoTone />
       <ViewsTwoTone />
       <CalendarTwoTone />
-    </div>
+      <ExperimentsTwoTone/>
+    </IconView>
   );
 };
 TwoTone.args = { fontSize: '24px', color: '#171725' };
+

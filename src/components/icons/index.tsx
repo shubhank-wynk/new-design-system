@@ -108,4 +108,5 @@ export {   AddOutlined,
          VideoTwoTone,
          ViewsTwoTone,
          CalendarTwoTone,
+         ExperimentsTwoTone,
        } from './two-tone';
