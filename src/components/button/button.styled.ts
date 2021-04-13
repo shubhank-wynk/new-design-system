@@ -26,7 +26,7 @@ const getDesignTypeStyles = (type?: string,color:keyof typeof theme="orange") =>
           color:${theme[color].tertiaryText};
           border:none;
           border-bottom:1px solid transparent;
-          padding:0.366rem 0.75rem;
+          padding:0.34375rem 0.125rem;
           border-radius:0;
           &.btn-tertiary{
             &:hover,&:focus{border-bottom-color:${theme[color].tertiaryText};}
@@ -69,7 +69,7 @@ const getSizeStyles = (size?: string) => {
       return css`
         font-size: 1.25rem;
         line-height:1.5rem;  
-        padding: 0.656rem 1.5rem;
+        padding: 0.6875rem 1.5rem;
         span{display:inline-block;}
         span.icon{font-size:1.5rem;line-height:0;}
         .iconLeft{margin-right:0.5rem; line-height:0;}
@@ -85,6 +85,8 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
         padding:0;
         height:3rem;
         width:3rem;
+        align-items:center;
+        justify-content:center;
         span{
           svg{font-size:1.5rem;line-height:1.5rem;padding-left:0 !important ;padding-right:0 !important;}
         }
@@ -99,9 +101,8 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
     case 'floating':
       return css`
         border-radius:3rem;
-        padding : 1.374rem 1.5rem;
+        padding : 1.4375rem 1.5rem;
         box-shadow:0.4rem 0.4rem 1.85rem ${theme[color].shadow}; 
-        font-size:1.5rem;
         .iconLeft{margin-right:0.75rem;}
         .iconRight{margin-left:0.75rem;}
       `;
@@ -129,6 +130,7 @@ export const StyledButton = styled.button<{
   outline:none;
   font-family:inherit;
   box-sizing:border-box;
+  display:inline-flex;
   ${(props) => getSizeStyles(props.size)};
   ${(props) => getShape(props.shape,props.theme)};
   ${(props) => getDesignTypeStyles(props.btntype,props.theme)};
