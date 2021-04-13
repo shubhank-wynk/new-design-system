@@ -53,20 +53,27 @@ const getSizeStyles = (size?: string) => {
       return css`
         font-size: 1rem;	
         line-height:1.5rem;	
-        padding: 0.288rem 1rem;
+        padding: 0.3125rem 1rem;
+        .iconLeft{margin-right:0.5rem; }
+        .iconRight{margin-left:0.5rem;}
       `;
     case 'large':
       return css`
         font-size: 1.5rem;
         line-height:1.75rem;
         padding: 0.75rem 1.75rem;
+        .iconLeft{margin-right:0.75rem;}
+        .iconRight{margin-left:0.75rem;}
       `;
     default:
       return css`
         font-size: 1.25rem;
         line-height:1.5rem;  
-        padding: 0.21rem 1.5rem;
-        span.icon{font-size:1.5rem;line-height:1.5rem;}
+        padding: 0.656rem 1.5rem;
+        span{display:inline-block;}
+        span.icon{font-size:1.5rem;line-height:0;}
+        .iconLeft{margin-right:0.5rem; line-height:0;}
+        .iconRight{margin-left:0.5rem;line-height:0;}
       `;
   }
 };
@@ -79,7 +86,7 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
         height:3rem;
         width:3rem;
         span{
-          svg{font-size:1.5rem;line-height:1.5rem;padding-left:0 !important ;padding-right:0 !important;margin-top:0.25rem;}
+          svg{font-size:1.5rem;line-height:1.5rem;padding-left:0 !important ;padding-right:0 !important;}
         }
       `;
     case 'rounded':
@@ -92,9 +99,11 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
     case 'floating':
       return css`
         border-radius:3rem;
-        padding : 1.084rem 1.5rem;
+        padding : 1.374rem 1.5rem;
         box-shadow:0.4rem 0.4rem 1.85rem ${theme[color].shadow}; 
         font-size:1.5rem;
+        .iconLeft{margin-right:0.75rem;}
+        .iconRight{margin-left:0.75rem;}
       `;
     default:
       return css`
@@ -102,6 +111,7 @@ const getShape = (shape?: string,color:keyof typeof theme="orange") => {
          background-color:inherit;
          color:inherit;
          border-color:inherit;
+         
       `;
   }
 };
@@ -127,6 +137,7 @@ export const StyledButton = styled.button<{
     &:active,.active{color:${theme.orange.btnColor1};}
   }
   span{
+    &.label{line-height:inherit;font-size:inherit;}
       &:first-child{svg{padding-right:0rem;}}
       &:last-child{svg{padding-left:0rem;}}
     }

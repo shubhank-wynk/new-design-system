@@ -7,7 +7,7 @@ interface Props {
 const IconWrapper = styled.span`
    vertical-align: middle;
    display:inline-block;
-   margin:0.236em;
+   line-height:0;
 `
 const SvgIcon = (WrappedComponent:React.FC) => {
    return class extends React.Component <Props> {
