@@ -114,6 +114,8 @@ import {
   ViewsTwoTone,
   CalendarTwoTone,
   ExperimentsTwoTone,
+  MoreFilterTwoTone,
+  MoreFilterActiveTwoTone,
 } from '../two-tone';
 const IconView =  styled.div`
   .icon{margin-right:0.5rem;
@@ -257,6 +259,8 @@ export const TwoTone = (args: args) => {
       <ViewsTwoTone />
       <CalendarTwoTone />
       <ExperimentsTwoTone/>
+      <MoreFilterTwoTone/>
+      <MoreFilterActiveTwoTone/>
     </IconView>
   );
 };
