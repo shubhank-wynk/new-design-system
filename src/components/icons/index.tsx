@@ -53,6 +53,9 @@ export {   AddOutlined,
    PublishedOutlined,
    RevertBackOutlined1,
    PodcastOutlined,
+   ClearAllOutlined,
+   AddScheduleOutlined,
+   AddedScheduleOutlined,
   } from './outlined';
 
 

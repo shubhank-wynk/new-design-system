@@ -57,7 +57,10 @@ import {
   DocumentSearcchOutlined,
   PublishedOutlined,
   RevertBackOutlined1,
-  PodcastOutlined
+  PodcastOutlined,
+  ClearAllOutlined,
+  AddScheduleOutlined,
+  AddedScheduleOutlined,
 } from '../outlined';
 
 import {
@@ -187,6 +190,9 @@ export const Outlined = (args: args) => {
       <PublishedOutlined />
       <RevertBackOutlined1 />
       <PodcastOutlined/>
+      <ClearAllOutlined/>
+      <AddScheduleOutlined/>
+      <AddedScheduleOutlined/>
       {/* view box  0 0 16 16 icons outlined */}
       <AlertOutlined />
       <AlertTriangleOutlined />
