@@ -61,6 +61,8 @@ import {
   ClearAllOutlined,
   AddScheduleOutlined,
   AddedScheduleOutlined,
+  SelectedOutlined,
+  UnSelectedOutlined
 } from '../outlined';
 
 import {
@@ -193,6 +195,8 @@ export const Outlined = (args: args) => {
       <ClearAllOutlined/>
       <AddScheduleOutlined/>
       <AddedScheduleOutlined/>
+      <SelectedOutlined/>
+      <UnSelectedOutlined/>
       {/* view box  0 0 16 16 icons outlined */}
       <AlertOutlined />
       <AlertTriangleOutlined />

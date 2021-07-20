@@ -56,6 +56,8 @@ export {   AddOutlined,
    ClearAllOutlined,
    AddScheduleOutlined,
    AddedScheduleOutlined,
+   SelectedOutlined,
+   UnSelectedOutlined,
   } from './outlined';
 
 

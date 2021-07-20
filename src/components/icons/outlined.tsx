@@ -465,3 +465,18 @@ export const AddedScheduleOutlined = SvgIcon(() => {
 </svg>
  )
 });
+export const SelectedOutlined = SvgIcon(() => {
+   return (
+<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4.5" y="4.5" width="0.625em" height="0.625em" rx="3.5" fill="currentColor" stroke="currentColor"/>
+<path d="M10.0871 14.4661L8.01611 12.2241C7.90461 12.1031 7.75322 12.0351 7.59534 12.0351C7.43747 12.0351 7.28608 12.1031 7.17457 12.2241C6.94181 12.4761 6.94181 12.8831 7.17457 13.1351L9.66935 15.8359C9.90212 16.0879 10.2781 16.0879 10.5109 15.8359L16.8254 8.99992C17.0582 8.74793 17.0582 8.34087 16.8254 8.08888C16.7139 7.9679 16.5625 7.8999 16.4047 7.8999C16.2468 7.8999 16.0954 7.9679 15.9839 8.08888L10.0871 14.4661Z" fill="white"/>
+</svg>
+ )
+});
+export const UnSelectedOutlined = SvgIcon(() => {
+   return (
+<svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.625" y="0.625" width="0.625em" height="0.625em" rx="3.375" fill="white" stroke="currentColor" stroke-width="1.25"/>
+</svg>
+ )
+});
